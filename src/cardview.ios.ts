@@ -12,7 +12,7 @@ export class CardView extends CardViewCommon {
     const width = screen.mainScreen.widthDIPs - 20;
     this.nativeView = new UIView({ frame: CGRectMake(10, 30, width, 0) });
     this.nativeView.layer.masksToBounds = false;
-    this.shadowColor = 'black';
+    this.shadowColor = new Color('black');
     this.radius = 1;
     this.shadowRadius = 1;
     this.shadowOpacity = 0.4;
