@@ -51,7 +51,7 @@ export class CardView extends CardViewCommon {
 
                 const attrs = Array.create('int', 1);
                 attrs[0] = resId;
-                const activity: any = application.android.foregroundActivity | application.android.startActivity;
+                const activity: any = application.android.foregroundActivity || application.android.startActivity;
                 if (activity) {
                     const typedValue = activity.obtainStyledAttributes(attrs);
                     const selectedItemDrawable = typedValue.getDrawable(0);
